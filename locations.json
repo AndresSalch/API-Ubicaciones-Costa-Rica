@@ -1,0 +1,941 @@
+{
+  "1": [
+    "San José",
+    {
+      "1": [
+        "San José",
+        {
+          "1": "Carmen",
+          "2": "Merced",
+          "3": "Hospital",
+          "4": "Catedral",
+          "5": "Zapote",
+          "6": "San Francisco de Dos Ríos",
+          "7": "La Uruca",
+          "8": "Mata Redonda",
+          "9": "Pavas",
+          "10": "Hatillo",
+          "11": "San Sebastián"
+        }
+      ],
+      "2": [
+        "Escazú",
+        {
+          "1": "Escazú",
+          "2": "San Antonio",
+          "3": "San Rafael"
+        }
+      ],
+      "3": [
+        "Desamparados",
+        {
+          "1": "Desamparados",
+          "2": "San Miguel",
+          "3": "San Juan de Dios",
+          "4": "San Rafael Arriba",
+          "5": "San Antonio",
+          "6": "Frailes",
+          "7": "Patarrá",
+          "8": "San Cristóbal",
+          "9": "Rosario",
+          "10": "Damas",
+          "11": "San Rafael Abajo",
+          "12": "Gravilias",
+          "13": "Los Guido"
+        }
+      ],
+      "4": [
+        "Puriscal",
+        {
+          "1": "Santiago",
+          "2": "Mercedes Sur",
+          "3": "Barbacoas",
+          "4": "Grifo Alto",
+          "5": "San Rafael",
+          "6": "Candelarita",
+          "7": "Desamparaditos",
+          "8": "San Antonio",
+          "9": "Chires"
+        }
+      ],
+      "5": [
+        "Tarrazú",
+        {
+          "1": "San Marcos",
+          "2": "San Lorenzo",
+          "3": "San Carlos"
+        }
+      ],
+      "6": [
+        "Aserrí",
+        {
+          "1": "Aserrí",
+          "2": "Tarbaca",
+          "3": "Vuelta de Jorco",
+          "4": "San Gabriel",
+          "5": "Legua",
+          "6": "Monterrey",
+          "7": "Salitrillos"
+        }
+      ],
+      "7": [
+        "Mora",
+        {
+          "1": "Colón",
+          "2": "Guayabo",
+          "3": "Tabarcia",
+          "4": "Piedras Negras",
+          "5": "Picagres",
+          "6": "Jaris",
+          "7": "Quitirrisí"
+        }
+      ],
+      "8": [
+        "Goicoechea",
+        {
+          "1": "Guadalupe",
+          "2": "San Francisco",
+          "3": "Calle Blancos",
+          "4": "Mata de Plátano",
+          "5": "Ipís",
+          "6": "Rancho Redondo",
+          "7": "Purral"
+        }
+      ],
+      "9": [
+        "Santa Ana",
+        {
+          "1": "Santa Ana",
+          "2": "Salitral",
+          "3": "Pozos",
+          "4": "Uruca",
+          "5": "Piedades",
+          "6": "Brasil"
+        }
+      ],
+      "10": [
+        "Alajuelita",
+        {
+          "1": "Alajuelita",
+          "2": "San Josecito",
+          "3": "San Antonio",
+          "4": "Concepción"
+        }
+      ],
+      "11": [
+        "Vázquez de Coronado",
+        {
+          "1": "San Isidro",
+          "2": "San Rafael",
+          "3": "Dulce Nombre de Jesús",
+          "4": "Patalillo",
+          "5": "Cascajal"
+        }
+      ],
+      "12": [
+        "Acosta",
+        {
+          "1": "San Ignacio",
+          "2": "Guaitil",
+          "3": "Palmichal",
+          "4": "Cangrejal",
+          "5": "Sabanillas"
+        }
+      ],
+      "13": [
+        "Tibás",
+        {
+          "1": "San Juan",
+          "2": "Cinco Esquinas",
+          "3": "Anselmo Llorente",
+          "4": "León XIII",
+          "5": "Colima"
+        }
+      ],
+      "14": [
+        "Moravia",
+        {
+          "1": "San Vicente",
+          "2": "San Jerónimo",
+          "3": "La Trinidad"
+        }
+      ],
+      "15": [
+        "Montes de Oca",
+        {
+          "1": "San Pedro",
+          "2": "Sabanilla",
+          "3": "Mercedes",
+          "4": "San Rafael"
+        }
+      ],
+      "18": [
+        "Turrubares",
+        {
+          "1": "San Pablo",
+          "2": "San Pedro",
+          "3": "San Juan de Mata",
+          "4": "San Luis",
+          "5": "Carara"
+        }
+      ],
+      "17": [
+        "Dota",
+        {
+          "1": "Santa María",
+          "2": "Jardín",
+          "3": "Copey"
+        }
+      ],
+      "16": [
+        "Curridabat",
+        {
+          "1": "Curridabat",
+          "2": "Granadilla",
+          "3": "Sánchez",
+          "4": "Tirrases"
+        }
+      ],
+      "19": [
+        "Pérez Zeledón",
+        {
+          "1": "San Isidro de El General",
+          "2": "General",
+          "3": "Daniel Flores",
+          "4": "Rivas",
+          "5": "San Pedro",
+          "6": "Platanares",
+          "7": "Pejibaye",
+          "8": "Cajón",
+          "9": "Barú",
+          "10": "Río Nuevo",
+          "11": "Páramo",
+          "12": "La Amistad"
+        }
+      ],
+      "20": [
+        "León Cortés Castro",
+        {
+          "1": "San Pablo",
+          "2": "San Andrés",
+          "3": "Llano Bonito",
+          "4": "San Isidro",
+          "5": "Santa Cruz",
+          "6": "San Antonio"
+        }
+      ]
+    }
+  ],
+  "2": [
+    "Alajuela",
+    {
+      "1": [
+        "Alajuela",
+        {
+          "1": "Alajuela",
+          "2": "San José",
+          "3": "Carrizal",
+          "4": "San Antonio",
+          "5": "Guácima",
+          "6": "San Isidro",
+          "7": "Sabanilla",
+          "8": "San Rafael",
+          "9": "Río Segundo",
+          "10": "Desamparados",
+          "11": "Turrúcares",
+          "12": "Tambor",
+          "13": "La Garita",
+          "14": "Sarapiquí"
+        }
+      ],
+      "2": [
+        "San Ramón",
+        {
+          "1": "San Ramón",
+          "2": "Santiago",
+          "3": "San Juan",
+          "4": "Piedades Norte",
+          "5": "Piedades Sur",
+          "6": "San Rafael",
+          "7": "San Isidro",
+          "8": "Angeles",
+          "9": "Alfaro",
+          "10": "Volio",
+          "11": "Concepción",
+          "12": "Zapotal",
+          "13": "Peñas Blancas",
+          "14": "San Lorenzo"
+        }
+      ],
+      "3": [
+        "Grecia",
+        {
+          "1": "Grecia",
+          "2": "San Isidro",
+          "3": "San José",
+          "4": "San Roque",
+          "5": "Tacares",
+          "6": "Puente de Piedra",
+          "7": "Bolívar"
+        }
+      ],
+      "4": [
+        "San Mateo",
+        {
+          "1": "San Mateo",
+          "2": "Desmonte",
+          "3": "Jesús María",
+          "4": "Labrador"
+        }
+      ],
+      "5": [
+        "Atenas",
+        {
+          "1": "Atenas",
+          "2": "Jesús",
+          "3": "Mercedes",
+          "4": "San Isidro",
+          "5": "Concepción",
+          "6": "San José",
+          "7": "Santa Eulalia",
+          "8": "Escobal"
+        }
+      ],
+      "6": [
+        "Naranjo",
+        {
+          "1": "Naranjo",
+          "2": "San Miguel",
+          "3": "San José",
+          "4": "Cirrí Sur",
+          "5": "San Jerónimo",
+          "6": "El Rosario",
+          "7": "Palmitos"
+        }
+      ],
+      "7": [
+        "Palmares",
+        {
+          "1": "Palmares",
+          "2": "Zaragoza",
+          "3": "Buenos Aires",
+          "4": "Santiago",
+          "5": "Candelaria",
+          "6": "Esquipulas",
+          "7": "La Granja"
+        }
+      ],
+      "8": [
+        "Poás",
+        {
+          "1": "San Pedro",
+          "2": "San Juan",
+          "3": "San Rafael",
+          "4": "Carrillos",
+          "5": "Sabana Redonda"
+        }
+      ],
+      "9": [
+        "Orotina",
+        {
+          "1": "Orotina",
+          "2": "El Mastate",
+          "3": "Hacienda Vieja",
+          "4": "Coyolar",
+          "5": "La Ceiba"
+        }
+      ],
+      "10": [
+        "San Carlos",
+        {
+          "1": "Quesada",
+          "2": "Florencia",
+          "3": "Buenavista",
+          "4": "Aguas Zarcas",
+          "5": "Venecia",
+          "6": "Pital",
+          "7": "La Fortuna",
+          "8": "La Tigra",
+          "9": "La Palmera",
+          "10": "Venado",
+          "11": "Cutris",
+          "12": "Monterrey",
+          "13": "Pocosol"
+        }
+      ],
+      "11": [
+        "Zarcero",
+        {
+          "1": "Zarcero",
+          "2": "Laguna",
+          "3": "Tapezco",
+          "4": "Guadalupe",
+          "5": "Palmira",
+          "6": "Zapote",
+          "7": "Brisas"
+        }
+      ],
+      "12": [
+        "Sarchí",
+        {
+          "1": "Sarchí Norte",
+          "2": "Sarchí Sur",
+          "3": "Toro Amarillo",
+          "4": "San Pedro",
+          "5": "Rodríguez"
+        }
+      ],
+      "13": [
+        "Upala",
+        {
+          "1": "Upala",
+          "2": "Aguas Claras",
+          "3": "San José o Pizote",
+          "4": "Bijagua",
+          "5": "Delicias",
+          "6": "Dos Ríos",
+          "7": "Yolillal",
+          "8": "Canalete"
+        }
+      ],
+      "14": [
+        "Los Chiles",
+        {
+          "1": "Los Chiles",
+          "2": "Caño Negro",
+          "3": "El Amparo",
+          "4": "San Jorge"
+        }
+      ],
+      "15": [
+        "Guatuso",
+        {
+          "1": "San Rafael",
+          "2": "Buenavista",
+          "3": "Cote",
+          "4": "Katira"
+        }
+      ],
+      "16": [
+        "Río Cuarto",
+        {
+          "1": "Río Cuarto",
+          "2": "Santa Rita",
+          "3": "Santa Isabel"
+        }
+      ]
+    }
+  ],
+  "3": [
+    "Cartago",
+    {
+      "1": [
+        "Cartago",
+        {
+          "1": "Oriental",
+          "2": "Occidental",
+          "3": "Carmen",
+          "4": "San Nicolás",
+          "5": "Aguacaliente",
+          "6": "Guadalupe",
+          "7": "Corralillo",
+          "8": "Tierra Blanca"
+        }
+      ],
+      "2": [
+        "Paraíso",
+        {
+          "1": "Paraíso",
+          "2": "Santiago",
+          "3": "Orosi",
+          "4": "Cachí",
+          "5": "Llanos de Santa Lucía",
+          "6": "Birrisito"
+        }
+      ],
+      "3": [
+        "La Unión",
+        {
+          "1": "Tres Ríos",
+          "2": "San Diego",
+          "3": "San Juan",
+          "4": "San Rafael",
+          "5": "Concepción",
+          "6": "Dulce Nombre",
+          "7": "San Ramón",
+          "8": "Río Azul"
+        }
+      ],
+      "4": [
+        "Jiménez",
+        {
+          "1": "Juan Viñas",
+          "2": "Tucurrique",
+          "3": "Pejibaye",
+          "4": "La Victoria"
+        }
+      ],
+      "5": [
+        "Turrialba",
+        {
+          "1": "Turrialba",
+          "2": "La Suiza",
+          "3": "Peralta",
+          "4": "Santa Cruz",
+          "5": "Santa Teresita",
+          "6": "Pavones",
+          "7": "Tuis",
+          "8": "Tayutic",
+          "9": "Santa Rosa",
+          "10": "Tres Equis",
+          "11": "La Isabel",
+          "12": "Chirripó"
+        }
+      ],
+      "6": [
+        "Alvarado",
+        {
+          "1": "Pacayas",
+          "2": "Cervantes",
+          "3": "Capellades"
+        }
+      ],
+      "7": [
+        "Oreamuno",
+        {
+          "1": "San Rafael",
+          "2": "Cot",
+          "3": "Potrero Cerrado",
+          "4": "Cipreses",
+          "5": "Santa Rosa"
+        }
+      ],
+      "8": [
+        "El Guarco",
+        {
+          "1": "Tejar",
+          "2": "San Isidro",
+          "3": "Tobosi",
+          "4": "Patio de Agua"
+        }
+      ]
+    }
+  ],
+  "4": [
+    "Heredia",
+    {
+      "1": [
+        "Central",
+        {
+          "1": "Heredia",
+          "2": "Mercedes",
+          "3": "San Francisco",
+          "4": "Ulloa",
+          "5": "Varablanca"
+        }
+      ],
+      "2": [
+        "Barva",
+        {
+          "1": "Barva",
+          "2": "San Pedro",
+          "3": "San Pablo",
+          "4": "San Roque",
+          "5": "Santa Lucía",
+          "6": "San José de la Montaña"
+        }
+      ],
+      "3": [
+        "Santo Domingo",
+        {
+          "1": "Santo Domingo",
+          "2": "San Vicente",
+          "3": "San Miguel",
+          "4": "Paracito",
+          "5": "Santo Tomás",
+          "6": "Santa Rosa",
+          "7": "Tures",
+          "8": "Pará"
+        }
+      ],
+      "4": [
+        "Santa Bárbara",
+        {
+          "1": "Santa Bárbara",
+          "2": "San Pedro",
+          "3": "San Juan",
+          "4": "Jesús",
+          "5": "Santo Domingo",
+          "6": "Purabá"
+        }
+      ],
+      "5": [
+        "San Rafael",
+        {
+          "1": "San Rafael",
+          "2": "San Josecito",
+          "3": "Santiago",
+          "4": "Ángeles",
+          "5": "Concepción"
+        }
+      ],
+      "6": [
+        "San Isidro",
+        {
+          "1": "San Isidro",
+          "2": "San José",
+          "3": "Concepción",
+          "4": "San Francisco"
+        }
+      ],
+      "7": [
+        "Belén",
+        {
+          "1": "San Antonio",
+          "2": "La Ribera",
+          "3": "La Asunción"
+        }
+      ],
+      "8": [
+        "Flores",
+        {
+          "1": "San Joaquín",
+          "2": "Barrantes",
+          "3": "Llorente"
+        }
+      ],
+      "9": [
+        "San Pablo",
+        {
+          "1": "San Pablo",
+          "2": "Rincón de Sabanilla"
+        }
+      ],
+      "10": [
+        "Sarapiquí",
+        {
+          "1": "Puerto Viejo",
+          "2": "La Virgen",
+          "3": "Horquetas",
+          "4": "Llanuras del Gaspar",
+          "5": "Cureña"
+        }
+      ]
+    }
+  ],
+  "5": [
+    "Guanacaste",
+    {
+      "1": [
+        "Guanacaste",
+        {
+          "1": "Liberia",
+          "2": "Cañas Dulces",
+          "3": "Mayorga",
+          "4": "Nacascolo",
+          "5": "Curubandé"
+        }
+      ],
+      "2": [
+        "Nicoya",
+        {
+          "1": "Nicoya",
+          "2": "Mansión",
+          "3": "San Antonio",
+          "4": "Quebrada Honda",
+          "5": "Sámara",
+          "6": "Nosara",
+          "7": "Belén de Nosarita"
+        }
+      ],
+      "3": [
+        "Santa Cruz",
+        {
+          "1": "Santa Cruz",
+          "2": "Bolsón",
+          "3": "Veintisiete de Abril",
+          "4": "Tempate",
+          "5": "Cartagena",
+          "6": "Cuajiniquil",
+          "7": "Diriá",
+          "8": "Cabo Velas",
+          "9": "Tamarindo"
+        }
+      ],
+      "4": [
+        "Bagaces",
+        {
+          "1": "Bagaces",
+          "2": "La Fortuna",
+          "3": "Mogote",
+          "4": "Río Naranjo"
+        }
+      ],
+      "5": [
+        "Carrillo",
+        {
+          "1": "Filadelfia",
+          "2": "Palmira",
+          "3": "Sardinal",
+          "4": "Belén"
+        }
+      ],
+      "6": [
+        "Cañas",
+        {
+          "1": "Cañas",
+          "2": "Palmira",
+          "3": "San Miguel",
+          "4": "Bebedero",
+          "5": "Porozal"
+        }
+      ],
+      "7": [
+        "Abangares",
+        {
+          "1": "Las Juntas",
+          "2": "Sierra",
+          "3": "San Juan",
+          "4": "Colorado"
+        }
+      ],
+      "8": [
+        "Tilarán",
+        {
+          "1": "Tilarán",
+          "2": "Quebrada Grande",
+          "3": "Tronadora",
+          "4": "Santa Rosa",
+          "5": "Líbano",
+          "6": "Tierras Morenas",
+          "7": "Arenal",
+          "8": "Cabeceras"
+        }
+      ],
+      "9": [
+        "Nandayure",
+        {
+          "1": "Carmona",
+          "2": "Santa Rita",
+          "3": "San Pablo",
+          "4": "Porvenir",
+          "5": "Bejuco"
+        }
+      ],
+      "10": [
+        "La Cruz",
+        {
+          "1": "La Cruz",
+          "2": "Santa Cecilia",
+          "3": "Garita",
+          "4": "Santa Elena"
+        }
+      ],
+      "11": [
+        "Hojancha",
+        {
+          "1": "Hojancha",
+          "2": "Monte Romo",
+          "3": "Puerto Carrillo",
+          "4": "Huacas",
+          "5": "Matambú"
+        }
+      ]
+    }
+  ],
+  "6": [
+    "Puntarenas",
+    {
+      "1": [
+        "Puntarenas",
+        {
+          "1": "Puntarenas",
+          "2": "Pitahaya",
+          "3": "Chomes",
+          "4": "Lepanto",
+          "5": "Paquera",
+          "6": "Manzanillo",
+          "7": "Guacimal",
+          "8": "Barranca",
+          "9": "Isla del Coco",
+          "10": "Cóbano",
+          "11": "Chacarita",
+          "12": "Acapulco",
+          "13": "El Roble",
+          "14": "Arancibia"
+        }
+      ],
+      "2": [
+        "Esparza",
+        {
+          "1": "Espíritu Santo",
+          "2": "San Juan Grande",
+          "3": "Macacona",
+          "4": "San Rafael",
+          "5": "San Jerónimo",
+          "6": "Caldera"
+        }
+      ],
+      "3": [
+        "Buenos Aires",
+        {
+          "1": "Buenos Aires",
+          "2": "Volcán",
+          "3": "Potrero Grande",
+          "4": "Boruca",
+          "5": "Pilas",
+          "6": "Colinas",
+          "7": "Chánguena",
+          "8": "Biolley",
+          "9": "Brunka"
+        }
+      ],
+      "4": [
+        "Montes de Oro",
+        {
+          "1": "Miramar",
+          "2": "La Unión",
+          "3": "San Isidro"
+        }
+      ],
+      "5": [
+        "Osa",
+        {
+          "1": "Puerto Cortés",
+          "2": "Palmar",
+          "3": "Sierpe",
+          "4": "Bahía Ballena",
+          "5": "Piedras Blancas",
+          "6": "Bahía Drake"
+        }
+      ],
+      "6": [
+        "Quepos",
+        {
+          "1": "Quepos",
+          "2": "Savegre",
+          "3": "Naranjito"
+        }
+      ],
+      "7": [
+        "Golfito",
+        {
+          "1": "Golfito",
+          "2": "Guaycará",
+          "3": "Pavón"
+        }
+      ],
+      "8": [
+        "Coto Brus",
+        {
+          "1": "San Vito",
+          "2": "Sabalito",
+          "3": "Aguabuena",
+          "4": "Limoncito",
+          "5": "Pittier",
+          "6": "Gutiérrez Braun"
+        }
+      ],
+      "9": [
+        "Parrita",
+        {
+          "1": "Parrita"
+        }
+      ],
+      "10": [
+        "Corredores",
+        {
+          "1": "Corredor",
+          "2": "La Cuesta",
+          "3": "Canoas",
+          "4": "Laurel"
+        }
+      ],
+      "11": [
+        "Garabito",
+        {
+          "1": "Jacó",
+          "2": "Tárcoles",
+          "3": "Lagunillas"
+        }
+      ],
+      "12": [
+        "Monteverde",
+        {
+          "1": "Monteverde"
+        }
+      ],
+      "13": [
+        "Puerto Jiménez",
+        {
+          "1": "Puerto Jiménez"
+        }
+      ]
+    }
+  ],
+  "7": [
+    "Limón",
+    {
+      "1": [
+        "Limón",
+        {
+          "1": "Limón",
+          "2": "Valle La Estrella",
+          "3": "Río Blanco",
+          "4": "Matama"
+        }
+      ],
+      "2": [
+        "Pococí",
+        {
+          "1": "Guápiles",
+          "2": "Jiménez",
+          "3": "Roxana",
+          "4": "Cariari",
+          "5": "La Rita",
+          "6": "Colorado",
+          "7": "La Colonia"
+        }
+      ],
+      "3": [
+        "Siquirres",
+        {
+          "1": "Siquirres",
+          "2": "Pacuarito",
+          "3": "Florida",
+          "4": "Germania",
+          "5": "Cairo",
+          "6": "Alegría",
+          "7": "Reventazón"
+        }
+      ],
+      "4": [
+        "Talamanca",
+        {
+          "1": "Bratsi",
+          "2": "Sixaola",
+          "3": "Cahuita",
+          "4": "Telire"
+        }
+      ],
+      "5": [
+        "Matina",
+        {
+          "1": "Matina",
+          "2": "Batán",
+          "3": "Carrandi"
+        }
+      ],
+      "6": [
+        "Guácimo",
+        {
+          "1": "Guácimo",
+          "2": "Mercedes",
+          "3": "Pocora",
+          "4": "Río Jiménez",
+          "5": "Duacarí"
+        }
+      ]
+    }
+  ]
+}
