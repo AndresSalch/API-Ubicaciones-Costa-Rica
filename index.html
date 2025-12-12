@@ -222,8 +222,8 @@
     <script>
         // Variables globales para almacenar los datos
         let locationsData = null;
-        let currentProvinceData = null;
-        let currentCantonData = null;
+        let currentProvinceId = null;
+        let currentCantonId = null;
 
         // Referencias a los elementos del DOM
         const loadingDiv = document.querySelector('.loading');
@@ -265,10 +265,12 @@
         function populateProvinces() {
             provinceSelect.innerHTML = '<option value="">-- Seleccione una provincia --</option>';
             
-            locationsData.forEach((province, index) => {
+            // Iterar sobre las provincias en el JSON
+            Object.keys(locationsData).forEach(provinceId => {
+                const provinceName = locationsData[provinceId][0];
                 const option = document.createElement('option');
-                option.value = index;
-                option.textContent = province.provincia;
+                option.value = provinceId;
+                option.textContent = provinceName;
                 provinceSelect.appendChild(option);
             });
             
@@ -277,7 +279,7 @@
 
         // Evento cuando se selecciona una provincia
         provinceSelect.addEventListener('change', (e) => {
-            const provinceIndex = e.target.value;
+            currentProvinceId = e.target.value;
             
             // Resetear cantones y distritos
             cantonSelect.innerHTML = '<option value="">-- Seleccione un cantón --</option>';
@@ -286,25 +288,26 @@
             districtSelect.disabled = true;
             resultDiv.classList.remove('show');
             
-            if (provinceIndex === '') {
+            if (currentProvinceId === '') {
                 return;
             }
             
-            // Guardar la provincia seleccionada
-            currentProvinceData = locationsData[provinceIndex];
-            
             // Poblar cantones
-            populateCantons(currentProvinceData.cantones);
+            populateCantons(currentProvinceId);
         });
 
         // Poblar el selector de cantones
-        function populateCantons(cantones) {
+        function populateCantons(provinceId) {
             cantonSelect.innerHTML = '<option value="">-- Seleccione un cantón --</option>';
             
-            cantones.forEach((canton, index) => {
+            const cantones = locationsData[provinceId][1];
+            
+            // Iterar sobre los cantones
+            Object.keys(cantones).forEach(cantonId => {
+                const cantonName = cantones[cantonId][0];
                 const option = document.createElement('option');
-                option.value = index;
-                option.textContent = canton.canton;
+                option.value = cantonId;
+                option.textContent = cantonName;
                 cantonSelect.appendChild(option);
             });
             
@@ -313,32 +316,33 @@
 
         // Evento cuando se selecciona un cantón
         cantonSelect.addEventListener('change', (e) => {
-            const cantonIndex = e.target.value;
+            currentCantonId = e.target.value;
             
             // Resetear distritos
             districtSelect.innerHTML = '<option value="">-- Seleccione un distrito --</option>';
             districtSelect.disabled = true;
             resultDiv.classList.remove('show');
             
-            if (cantonIndex === '') {
+            if (currentCantonId === '') {
                 return;
             }
             
-            // Guardar el cantón seleccionado
-            currentCantonData = currentProvinceData.cantones[cantonIndex];
-            
             // Poblar distritos
-            populateDistricts(currentCantonData.distritos);
+            populateDistricts(currentProvinceId, currentCantonId);
         });
 
         // Poblar el selector de distritos
-        function populateDistricts(distritos) {
+        function populateDistricts(provinceId, cantonId) {
             districtSelect.innerHTML = '<option value="">-- Seleccione un distrito --</option>';
             
-            distritos.forEach((distrito, index) => {
+            const distritos = locationsData[provinceId][1][cantonId][1];
+            
+            // Iterar sobre los distritos
+            Object.keys(distritos).forEach(districtId => {
+                const districtName = distritos[districtId];
                 const option = document.createElement('option');
-                option.value = index;
-                option.textContent = distrito;
+                option.value = districtId;
+                option.textContent = districtName;
                 districtSelect.appendChild(option);
             });
             
@@ -347,27 +351,30 @@
 
         // Evento cuando se selecciona un distrito
         districtSelect.addEventListener('change', (e) => {
-            const districtIndex = e.target.value;
+            const districtId = e.target.value;
             
-            if (districtIndex === '') {
+            if (districtId === '') {
                 resultDiv.classList.remove('show');
                 return;
             }
             
-            // Mostrar el resultado
-            const selectedDistrict = currentCantonData.distritos[districtIndex];
+            // Obtener los nombres seleccionados
+            const provinceName = locationsData[currentProvinceId][0];
+            const cantonName = locationsData[currentProvinceId][1][currentCantonId][0];
+            const districtName = locationsData[currentProvinceId][1][currentCantonId][1][districtId];
             
-            document.getElementById('selectedProvince').textContent = currentProvinceData.provincia;
-            document.getElementById('selectedCanton').textContent = currentCantonData.canton;
-            document.getElementById('selectedDistrict').textContent = selectedDistrict;
+            // Mostrar el resultado
+            document.getElementById('selectedProvince').textContent = provinceName;
+            document.getElementById('selectedCanton').textContent = cantonName;
+            document.getElementById('selectedDistrict').textContent = districtName;
             
             resultDiv.classList.add('show');
             
             // Log para propósitos de desarrollo
             console.log('Ubicación seleccionada:', {
-                provincia: currentProvinceData.provincia,
-                canton: currentCantonData.canton,
-                distrito: selectedDistrict
+                provincia: { id: currentProvinceId, nombre: provinceName },
+                canton: { id: currentCantonId, nombre: cantonName },
+                distrito: { id: districtId, nombre: districtName }
             });
         });
     </script>
