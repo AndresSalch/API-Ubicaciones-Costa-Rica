@@ -80,7 +80,3 @@ Este proyecto está bajo la licencia GNU General Public License v3.0 - mirá el 
 ## Contacto
 
 ¿Alguna duda o sugerencia? Abrí un issue en el repo. 
-
----
-
-Hecho con ❤️ en Costa Rica 🇨🇷
