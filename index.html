@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones de Costa Rica - Ejemplo de Uso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            background-color: white;
+        }
+
+        select:disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            color: white;
+            display: none;
+        }
+
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .result h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .result p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .result strong {
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            color: #667eea;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        .info-box p {
+            color: #555;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇨🇷 Ubicaciones de Costa Rica</h1>
+        <p class="subtitle">Selección en cascada de Provincia, Cantón y Distrito</p>
+
+        <div class="info-box">
+            <p>
+                <strong>Ejemplo de uso:</strong> Este proyecto demuestra cómo utilizar el archivo 
+                locations.json para crear selectores en cascada. Seleccione una provincia para ver 
+                sus cantones, y luego un cantón para ver sus distritos.
+            </p>
+        </div>
+
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Cargando datos...</p>
+        </div>
+
+        <form id="locationForm">
+            <div class="form-group">
+                <label for="province">Provincia:</label>
+                <select id="province" name="province" disabled>
+                    <option value="">-- Seleccione una provincia --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="canton">Cantón:</label>
+                <select id="canton" name="canton" disabled>
+                    <option value="">-- Primero seleccione una provincia --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="district">Distrito:</label>
+                <select id="district" name="district" disabled>
+                    <option value="">-- Primero seleccione un cantón --</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="result" id="result">
+            <h3>📍 Ubicación Seleccionada:</h3>
+            <p><strong>Provincia:</strong> <span id="selectedProvince"></span></p>
+            <p><strong>Cantón:</strong> <span id="selectedCanton"></span></p>
+            <p><strong>Distrito:</strong> <span id="selectedDistrict"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales para almacenar los datos
+        let locationsData = null;
+        let currentProvinceData = null;
+        let currentCantonData = null;
+
+        // Referencias a los elementos del DOM
+        const loadingDiv = document.querySelector('.loading');
+        const provinceSelect = document.getElementById('province');
+        const cantonSelect = document.getElementById('canton');
+        const districtSelect = document.getElementById('district');
+        const resultDiv = document.getElementById('result');
+
+        // Cargar datos al iniciar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            loadLocationsData();
+        });
+
+        // Función para cargar el archivo locations.json
+        async function loadLocationsData() {
+            try {
+                loadingDiv.classList.add('show');
+                
+                // Cargar el archivo JSON
+                const response = await fetch('locations.json');
+                
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el archivo locations.json');
+                }
+                
+                locationsData = await response.json();
+                
+                // Inicializar el selector de provincias
+                populateProvinces();
+                
+                loadingDiv.classList.remove('show');
+            } catch (error) {
+                console.error('Error al cargar los datos:', error);
+                loadingDiv.innerHTML = '<p style="color: red;">❌ Error al cargar los datos. Asegúrese de que el archivo locations.json esté en el mismo directorio.</p>';
+            }
+        }
+
+        // Poblar el selector de provincias
+        function populateProvinces() {
+            provinceSelect.innerHTML = '<option value="">-- Seleccione una provincia --</option>';
+            
+            locationsData.forEach((province, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = province.provincia;
+                provinceSelect.appendChild(option);
+            });
+            
+            provinceSelect.disabled = false;
+        }
+
+        // Evento cuando se selecciona una provincia
+        provinceSelect.addEventListener('change', (e) => {
+            const provinceIndex = e.target.value;
+            
+            // Resetear cantones y distritos
+            cantonSelect.innerHTML = '<option value="">-- Seleccione un cantón --</option>';
+            districtSelect.innerHTML = '<option value="">-- Primero seleccione un cantón --</option>';
+            cantonSelect.disabled = true;
+            districtSelect.disabled = true;
+            resultDiv.classList.remove('show');
+            
+            if (provinceIndex === '') {
+                return;
+            }
+            
+            // Guardar la provincia seleccionada
+            currentProvinceData = locationsData[provinceIndex];
+            
+            // Poblar cantones
+            populateCantons(currentProvinceData.cantones);
+        });
+
+        // Poblar el selector de cantones
+        function populateCantons(cantones) {
+            cantonSelect.innerHTML = '<option value="">-- Seleccione un cantón --</option>';
+            
+            cantones.forEach((canton, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = canton.canton;
+                cantonSelect.appendChild(option);
+            });
+            
+            cantonSelect.disabled = false;
+        }
+
+        // Evento cuando se selecciona un cantón
+        cantonSelect.addEventListener('change', (e) => {
+            const cantonIndex = e.target.value;
+            
+            // Resetear distritos
+            districtSelect.innerHTML = '<option value="">-- Seleccione un distrito --</option>';
+            districtSelect.disabled = true;
+            resultDiv.classList.remove('show');
+            
+            if (cantonIndex === '') {
+                return;
+            }
+            
+            // Guardar el cantón seleccionado
+            currentCantonData = currentProvinceData.cantones[cantonIndex];
+            
+            // Poblar distritos
+            populateDistricts(currentCantonData.distritos);
+        });
+
+        // Poblar el selector de distritos
+        function populateDistricts(distritos) {
+            districtSelect.innerHTML = '<option value="">-- Seleccione un distrito --</option>';
+            
+            distritos.forEach((distrito, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = distrito;
+                districtSelect.appendChild(option);
+            });
+            
+            districtSelect.disabled = false;
+        }
+
+        // Evento cuando se selecciona un distrito
+        districtSelect.addEventListener('change', (e) => {
+            const districtIndex = e.target.value;
+            
+            if (districtIndex === '') {
+                resultDiv.classList.remove('show');
+                return;
+            }
+            
+            // Mostrar el resultado
+            const selectedDistrict = currentCantonData.distritos[districtIndex];
+            
+            document.getElementById('selectedProvince').textContent = currentProvinceData.provincia;
+            document.getElementById('selectedCanton').textContent = currentCantonData.canton;
+            document.getElementById('selectedDistrict').textContent = selectedDistrict;
+            
+            resultDiv.classList.add('show');
+            
+            // Log para propósitos de desarrollo
+            console.log('Ubicación seleccionada:', {
+                provincia: currentProvinceData.provincia,
+                canton: currentCantonData.canton,
+                distrito: selectedDistrict
+            });
+        });
+    </script>
+</body>
+</html>
